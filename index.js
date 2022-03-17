@@ -6,6 +6,7 @@ const Busquedas = require("./models/busquedas");
 
 const main = async()=>{
     const busquedas = new Busquedas ();
+    const cargarLugar="";
     let opt;   
 
     
@@ -20,11 +21,11 @@ const main = async()=>{
 
             case 1: 
                 //Mostrara mensaje 
-                const termino=await leerInput("Ciudad: ")
+                const termino=await leerInput(" Ingrese Ciudad: ")
 
                 //Buscar lugares
                 
-                const lugares= await busquedas.ciudad(termino);
+                const lugares=await busquedas.ciudad(termino)
                 
 
                 //Seleccion el lugar 
